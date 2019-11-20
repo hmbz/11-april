@@ -1,0 +1,1660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5wB-wi-wA0">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--DrawerVC-->
+        <scene sceneID="36v-Vr-atQ">
+            <objects>
+                <viewController storyboardIdentifier="DrawerViewController" id="5wB-wi-wA0" customClass="drawerVC" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.80000001192092896" contentMode="scaleToFill" id="hbJ-U6-Fng">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dprofile" translatesAutoresizingMaskIntoConstraints="NO" id="ZjA-JR-Dxf">
+                                <rect key="frame" x="157" y="59" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Nem-3W-ZaY"/>
+                                    <constraint firstAttribute="height" constant="100" id="ap1-Jy-59r"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sSc-Sr-QnX" appends="YES" id="ihz-0b-3a7"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Px9-dc-Btx">
+                                <rect key="frame" x="16" y="164" width="382" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fkd-V8-1cG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Kok-Ud-TD8">
+                                <rect key="frame" x="0.0" y="199" width="414" height="663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="40" id="GPC-Pl-cQy" customClass="DrawerTableViewCell" customModule="OgreSpace" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GPC-Pl-cQy" id="wFs-aL-p7a">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kok-Ud-TD8" firstAttribute="trailing" secondItem="z0P-lQ-JQK" secondAttribute="trailing" id="68Q-JK-m7w"/>
+                            <constraint firstItem="Kok-Ud-TD8" firstAttribute="top" secondItem="Px9-dc-Btx" secondAttribute="bottom" constant="5" id="9NX-dX-ZRK"/>
+                            <constraint firstItem="Kok-Ud-TD8" firstAttribute="leading" secondItem="z0P-lQ-JQK" secondAttribute="leading" id="DE4-zQ-pNW"/>
+                            <constraint firstItem="Kok-Ud-TD8" firstAttribute="bottom" secondItem="z0P-lQ-JQK" secondAttribute="bottom" id="HCy-Sq-ynx"/>
+                            <constraint firstItem="Px9-dc-Btx" firstAttribute="leading" secondItem="z0P-lQ-JQK" secondAttribute="leading" constant="16" id="LZO-h0-HeZ"/>
+                            <constraint firstItem="ZjA-JR-Dxf" firstAttribute="centerX" secondItem="hbJ-U6-Fng" secondAttribute="centerX" id="Rf7-kJ-y4o"/>
+                            <constraint firstItem="Px9-dc-Btx" firstAttribute="top" secondItem="ZjA-JR-Dxf" secondAttribute="bottom" constant="5" id="Uvf-rI-mK7"/>
+                            <constraint firstItem="ZjA-JR-Dxf" firstAttribute="top" secondItem="z0P-lQ-JQK" secondAttribute="top" constant="15" id="g4G-Rw-vPA"/>
+                            <constraint firstItem="z0P-lQ-JQK" firstAttribute="trailing" secondItem="Px9-dc-Btx" secondAttribute="trailing" constant="16" id="mue-rT-qY8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="z0P-lQ-JQK"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="h0P-oP-HZM"/>
+                    <connections>
+                        <outlet property="drawerTabView" destination="Kok-Ud-TD8" id="opx-Kk-FND"/>
+                        <outlet property="profileDrawerImageHeight" destination="Nem-3W-ZaY" id="jeD-aX-0xq"/>
+                        <outlet property="userImg" destination="ZjA-JR-Dxf" id="Mm3-Tq-zV6"/>
+                        <outlet property="userNameLbl" destination="Px9-dc-Btx" id="Pg2-66-eVT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d08-5e-Rip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sSc-Sr-QnX"/>
+            </objects>
+            <point key="canvasLocation" x="-3948" y="-122"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="cia-3f-rge">
+            <objects>
+                <viewController storyboardIdentifier="profileViewController" id="5Wg-Il-mz6" customClass="profileViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WG4-qp-Dx0"/>
+                        <viewControllerLayoutGuide type="bottom" id="mU6-ax-NJ8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fnE-YT-NmO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileSlide" translatesAutoresizingMaskIntoConstraints="NO" id="eNl-8Z-F9m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="pVo-5Y-flg"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vck-sX-FhX">
+                                <rect key="frame" x="0.0" y="309" width="375" height="557"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNy-5s-8od">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="570"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-Vp-1Nn" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                <rect key="frame" x="10" y="10" width="355" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="SYq-Wr-qqB"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zipcode" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUZ-O0-Eyf" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                <rect key="frame" x="10" y="134" width="355" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="uid-QI-Cum"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MWl-Kf-vzB" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                <rect key="frame" x="10" y="196" width="355" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="cnz-pa-rGO"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U9k-3x-Hut" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                <rect key="frame" x="10" y="258" width="355" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="qGL-GG-HOk"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DqO-bY-vNI" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                <rect key="frame" x="10" y="382" width="355" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="fU3-TY-bGW"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone#" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FvN-Yc-QJW" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                <rect key="frame" x="10" y="444" width="355" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="lNt-wr-dwf"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-xF-13y">
+                                                <rect key="frame" x="62.666666666666657" y="514" width="249.99999999999997" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="ETM-if-VBO"/>
+                                                    <constraint firstAttribute="height" constant="40" id="tk3-Tf-QKH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                <state key="normal" title="Update"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ihy-bo-lDW" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                <rect key="frame" x="10" y="320" width="355" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="RX1-lY-RAw"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGO-Mg-ct9" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                <rect key="frame" x="10" y="72" width="355" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="PbE-kv-Ea5"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="FvN-Yc-QJW" firstAttribute="leading" secondItem="vNy-5s-8od" secondAttribute="leading" constant="10" id="2US-OR-vqp"/>
+                                            <constraint firstItem="fGO-Mg-ct9" firstAttribute="leading" secondItem="vNy-5s-8od" secondAttribute="leading" constant="10" id="46C-AH-1qW"/>
+                                            <constraint firstAttribute="height" constant="570" id="4u7-vC-AFv"/>
+                                            <constraint firstItem="edJ-xF-13y" firstAttribute="top" secondItem="FvN-Yc-QJW" secondAttribute="bottom" constant="10" id="7CJ-eS-hcF"/>
+                                            <constraint firstAttribute="trailing" secondItem="FvN-Yc-QJW" secondAttribute="trailing" constant="10" id="BOp-op-8eV"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ihy-bo-lDW" secondAttribute="trailing" constant="10" id="BdF-Hx-cyQ"/>
+                                            <constraint firstItem="yUZ-O0-Eyf" firstAttribute="leading" secondItem="vNy-5s-8od" secondAttribute="leading" constant="10" id="Jdj-BZ-fVa"/>
+                                            <constraint firstAttribute="trailing" secondItem="U9k-3x-Hut" secondAttribute="trailing" constant="10" id="M64-gN-6L4"/>
+                                            <constraint firstItem="DqO-bY-vNI" firstAttribute="top" secondItem="Ihy-bo-lDW" secondAttribute="bottom" constant="2" id="Nbt-FU-kzV"/>
+                                            <constraint firstItem="kM1-Vp-1Nn" firstAttribute="leading" secondItem="vNy-5s-8od" secondAttribute="leading" constant="10" id="QuD-l1-1dr"/>
+                                            <constraint firstAttribute="trailing" secondItem="MWl-Kf-vzB" secondAttribute="trailing" constant="10" id="T2x-Ls-Lsd"/>
+                                            <constraint firstItem="yUZ-O0-Eyf" firstAttribute="top" secondItem="fGO-Mg-ct9" secondAttribute="bottom" constant="2" id="WT7-eD-x4T"/>
+                                            <constraint firstItem="FvN-Yc-QJW" firstAttribute="top" secondItem="DqO-bY-vNI" secondAttribute="bottom" constant="2" id="Yr0-1Z-Zfs"/>
+                                            <constraint firstItem="kM1-Vp-1Nn" firstAttribute="top" secondItem="vNy-5s-8od" secondAttribute="top" constant="10" id="cFj-5y-f5z"/>
+                                            <constraint firstItem="U9k-3x-Hut" firstAttribute="leading" secondItem="vNy-5s-8od" secondAttribute="leading" constant="10" id="d01-hy-dgg"/>
+                                            <constraint firstItem="fGO-Mg-ct9" firstAttribute="top" secondItem="kM1-Vp-1Nn" secondAttribute="bottom" constant="2" id="dyq-A3-FsT"/>
+                                            <constraint firstItem="MWl-Kf-vzB" firstAttribute="leading" secondItem="vNy-5s-8od" secondAttribute="leading" constant="10" id="fJ6-Sb-hJI"/>
+                                            <constraint firstAttribute="trailing" secondItem="kM1-Vp-1Nn" secondAttribute="trailing" constant="10" id="gUs-i3-cof"/>
+                                            <constraint firstAttribute="trailing" secondItem="fGO-Mg-ct9" secondAttribute="trailing" constant="10" id="gyU-rQ-Nm6"/>
+                                            <constraint firstAttribute="trailing" secondItem="yUZ-O0-Eyf" secondAttribute="trailing" constant="10" id="h1Z-9R-b3H"/>
+                                            <constraint firstItem="Ihy-bo-lDW" firstAttribute="leading" secondItem="vNy-5s-8od" secondAttribute="leading" constant="10" id="hpw-XV-zDM"/>
+                                            <constraint firstAttribute="bottom" secondItem="edJ-xF-13y" secondAttribute="bottom" constant="16" id="hxp-Hx-bzU"/>
+                                            <constraint firstItem="DqO-bY-vNI" firstAttribute="leading" secondItem="vNy-5s-8od" secondAttribute="leading" constant="10" id="nuf-Ve-aDC"/>
+                                            <constraint firstItem="MWl-Kf-vzB" firstAttribute="top" secondItem="yUZ-O0-Eyf" secondAttribute="bottom" constant="2" id="r3G-cq-Ku6"/>
+                                            <constraint firstItem="U9k-3x-Hut" firstAttribute="top" secondItem="MWl-Kf-vzB" secondAttribute="bottom" constant="2" id="wC2-gf-CS0"/>
+                                            <constraint firstAttribute="trailing" secondItem="DqO-bY-vNI" secondAttribute="trailing" constant="10" id="xaG-XS-L7j"/>
+                                            <constraint firstItem="Ihy-bo-lDW" firstAttribute="top" secondItem="U9k-3x-Hut" secondAttribute="bottom" constant="2" id="y0I-aO-oLJ"/>
+                                            <constraint firstItem="edJ-xF-13y" firstAttribute="centerX" secondItem="vNy-5s-8od" secondAttribute="centerX" id="zQ9-kp-Hsa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vNy-5s-8od" secondAttribute="trailing" id="DEA-bP-zfZ"/>
+                                    <constraint firstItem="vNy-5s-8od" firstAttribute="leading" secondItem="vck-sX-FhX" secondAttribute="leading" id="HbW-q4-mL8"/>
+                                    <constraint firstAttribute="bottom" secondItem="vNy-5s-8od" secondAttribute="bottom" id="eaB-pL-IEj"/>
+                                    <constraint firstItem="vNy-5s-8od" firstAttribute="top" secondItem="vck-sX-FhX" secondAttribute="top" id="yYr-Q9-L8L"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-nH-Qn9">
+                                <rect key="frame" x="20" y="243.33333333333334" width="335" height="25.000000000000028"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Wdz-fU-hQ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dprofile" translatesAutoresizingMaskIntoConstraints="NO" id="86b-Q2-HZS">
+                                <rect key="frame" x="122.66666666666669" y="108.33333333333331" width="130" height="130"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="QUp-9t-sYN"/>
+                                    <constraint firstAttribute="height" constant="130" id="mM0-xZ-zbC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="65"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="86b-Q2-HZS" firstAttribute="centerY" secondItem="eNl-8Z-F9m" secondAttribute="centerY" multiplier="0.99" id="06v-G3-ZUS"/>
+                            <constraint firstItem="eNl-8Z-F9m" firstAttribute="leading" secondItem="VAf-NU-sWm" secondAttribute="leading" id="AV0-sG-4JJ"/>
+                            <constraint firstItem="86b-Q2-HZS" firstAttribute="centerX" secondItem="eNl-8Z-F9m" secondAttribute="centerX" id="CqE-xg-1Ee"/>
+                            <constraint firstItem="vNy-5s-8od" firstAttribute="width" secondItem="fnE-YT-NmO" secondAttribute="width" id="EwT-mj-gsN"/>
+                            <constraint firstItem="vck-sX-FhX" firstAttribute="top" secondItem="eNl-8Z-F9m" secondAttribute="bottom" constant="-41" id="IdM-fx-0dx"/>
+                            <constraint firstItem="VAf-NU-sWm" firstAttribute="trailing" secondItem="ehd-nH-Qn9" secondAttribute="trailing" constant="20" id="Lsk-OP-ITw"/>
+                            <constraint firstAttribute="trailing" secondItem="vck-sX-FhX" secondAttribute="trailing" id="Nch-Dn-TRh"/>
+                            <constraint firstItem="ehd-nH-Qn9" firstAttribute="leading" secondItem="VAf-NU-sWm" secondAttribute="leading" constant="20" id="PJq-Aa-LbQ"/>
+                            <constraint firstItem="eNl-8Z-F9m" firstAttribute="top" secondItem="fnE-YT-NmO" secondAttribute="top" id="V7J-Hu-Jkm"/>
+                            <constraint firstItem="vck-sX-FhX" firstAttribute="leading" secondItem="fnE-YT-NmO" secondAttribute="leading" id="X4E-7e-aB2"/>
+                            <constraint firstItem="VAf-NU-sWm" firstAttribute="trailing" secondItem="eNl-8Z-F9m" secondAttribute="trailing" id="hp1-3S-wiQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="vck-sX-FhX" secondAttribute="bottom" id="jcg-4E-3Mq"/>
+                            <constraint firstItem="ehd-nH-Qn9" firstAttribute="top" secondItem="86b-Q2-HZS" secondAttribute="bottom" constant="5" id="ypk-b1-Y3S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VAf-NU-sWm"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="900"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="DqO-bY-vNI" id="bfb-dt-Jo6"/>
+                        <outlet property="cityTextField" destination="U9k-3x-Hut" id="D3e-fx-MhJ"/>
+                        <outlet property="countryTextField" destination="MWl-Kf-vzB" id="qB8-6o-zkV"/>
+                        <outlet property="firstNameTextField" destination="kM1-Vp-1Nn" id="ARe-o4-tOd"/>
+                        <outlet property="lastNameTextField" destination="fGO-Mg-ct9" id="fDe-bZ-kbL"/>
+                        <outlet property="phoneNoTextField" destination="FvN-Yc-QJW" id="Lbx-93-YNe"/>
+                        <outlet property="profileImageHeight" destination="pVo-5Y-flg" id="HD5-qh-NiM"/>
+                        <outlet property="profileImg" destination="86b-Q2-HZS" id="MA1-ay-Uq1"/>
+                        <outlet property="stateTextField" destination="Ihy-bo-lDW" id="6XM-Xm-5qY"/>
+                        <outlet property="updateBtn" destination="edJ-xF-13y" id="dkj-N3-8ee"/>
+                        <outlet property="zipCodeTextField" destination="yUZ-O0-Eyf" id="WXe-4S-teg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKj-05-u03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3240" y="-120"/>
+        </scene>
+        <!--Change Password-->
+        <scene sceneID="We2-4i-8Lm">
+            <objects>
+                <viewController storyboardIdentifier="resetPassViewController" title="Change Password" id="7JU-ok-aE6" customClass="resetPassViewController" customModule="OgreSpace" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="avJ-DH-QXh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileSlide" translatesAutoresizingMaskIntoConstraints="NO" id="S0z-41-n9t">
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="OEj-eq-kzS"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xR2-vO-Dq3" userLabel="card">
+                                <rect key="frame" x="10" y="244" width="394" height="450"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aa5-5j-Sm8" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="jMe-VN-UxN"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                <color key="value" red="0.95686274510000002" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XED-de-ywh" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                        <rect key="frame" x="0.0" y="80" width="394" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="5Lo-ht-DUI"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                <color key="value" red="0.95686274510000002" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebM-Q6-wP8">
+                                        <rect key="frame" x="354" y="90" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="i9H-yq-QfF"/>
+                                            <constraint firstAttribute="height" constant="30" id="vsh-JW-7eh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="unLike"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6v7-F0-z07" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                        <rect key="frame" x="0.0" y="160" width="394" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="I4d-Ks-JNT"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                <color key="value" red="0.95686274510000002" green="0.0" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mW5-Zh-JBB">
+                                        <rect key="frame" x="87" y="240" width="220" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="0i0-cS-eY2"/>
+                                            <constraint firstAttribute="height" constant="40" id="slL-Rg-OJn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitActionTapped:" destination="7JU-ok-aE6" eventType="touchUpInside" id="GYJ-s8-k9b"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Wc-Am-l8O">
+                                        <rect key="frame" x="354" y="75" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="X0P-cz-U7r"/>
+                                            <constraint firstAttribute="width" constant="30" id="h5B-6J-o4W"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="unLike"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srt-q9-fGq">
+                                        <rect key="frame" x="354" y="170" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="TL3-EO-VsC"/>
+                                            <constraint firstAttribute="height" constant="30" id="dIF-LF-sDK"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="unLike"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ebM-Q6-wP8" firstAttribute="top" secondItem="Aa5-5j-Sm8" secondAttribute="bottom" constant="30" id="5Fa-4X-PA8"/>
+                                    <constraint firstItem="mW5-Zh-JBB" firstAttribute="centerX" secondItem="xR2-vO-Dq3" secondAttribute="centerX" id="5Qa-N1-E1e"/>
+                                    <constraint firstAttribute="trailing" secondItem="6v7-F0-z07" secondAttribute="trailing" id="6gt-La-Cbu"/>
+                                    <constraint firstAttribute="height" constant="450" id="Az0-Lr-efX"/>
+                                    <constraint firstItem="6v7-F0-z07" firstAttribute="leading" secondItem="xR2-vO-Dq3" secondAttribute="leading" id="HNq-9Y-n7x"/>
+                                    <constraint firstItem="XED-de-ywh" firstAttribute="top" secondItem="Aa5-5j-Sm8" secondAttribute="bottom" constant="20" id="HjR-7l-g0c"/>
+                                    <constraint firstItem="srt-q9-fGq" firstAttribute="top" secondItem="XED-de-ywh" secondAttribute="bottom" constant="30" id="I4e-Me-iJs"/>
+                                    <constraint firstItem="6v7-F0-z07" firstAttribute="top" secondItem="XED-de-ywh" secondAttribute="bottom" constant="20" id="IKz-cx-fho"/>
+                                    <constraint firstItem="mW5-Zh-JBB" firstAttribute="top" secondItem="6v7-F0-z07" secondAttribute="bottom" constant="20" id="JmL-eR-20G"/>
+                                    <constraint firstAttribute="trailing" secondItem="ebM-Q6-wP8" secondAttribute="trailing" constant="10" id="SO9-ya-nOm"/>
+                                    <constraint firstAttribute="trailing" secondItem="XED-de-ywh" secondAttribute="trailing" id="VSu-wM-Z0W"/>
+                                    <constraint firstAttribute="trailing" secondItem="srt-q9-fGq" secondAttribute="trailing" constant="10" id="YbW-i8-sXq"/>
+                                    <constraint firstItem="Aa5-5j-Sm8" firstAttribute="top" secondItem="xR2-vO-Dq3" secondAttribute="top" id="eIX-2L-mPJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Wc-Am-l8O" secondAttribute="trailing" constant="10" id="hRZ-Xl-ZFI"/>
+                                    <constraint firstAttribute="trailing" secondItem="Aa5-5j-Sm8" secondAttribute="trailing" id="ugP-V7-swT"/>
+                                    <constraint firstItem="XED-de-ywh" firstAttribute="leading" secondItem="xR2-vO-Dq3" secondAttribute="leading" id="ylI-AS-SC4"/>
+                                    <constraint firstItem="Aa5-5j-Sm8" firstAttribute="leading" secondItem="xR2-vO-Dq3" secondAttribute="leading" id="zgB-Oi-ZbK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="UJQ-mG-G9m">
+                                <rect key="frame" x="82" y="64" width="250" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="HKJ-dx-Jv1"/>
+                                    <constraint firstAttribute="width" constant="250" id="JVa-54-nmQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xR2-vO-Dq3" firstAttribute="top" secondItem="S0z-41-n9t" secondAttribute="bottom" id="3NQ-oS-862"/>
+                            <constraint firstItem="aGZ-0o-UTy" firstAttribute="trailing" secondItem="S0z-41-n9t" secondAttribute="trailing" id="40z-BZ-LOK"/>
+                            <constraint firstItem="aGZ-0o-UTy" firstAttribute="trailing" secondItem="xR2-vO-Dq3" secondAttribute="trailing" constant="10" id="DXb-ID-mfZ"/>
+                            <constraint firstItem="xR2-vO-Dq3" firstAttribute="leading" secondItem="aGZ-0o-UTy" secondAttribute="leading" constant="10" id="IMQ-rt-9Cy"/>
+                            <constraint firstItem="UJQ-mG-G9m" firstAttribute="top" secondItem="aGZ-0o-UTy" secondAttribute="top" constant="20" id="KeL-kR-znm"/>
+                            <constraint firstItem="S0z-41-n9t" firstAttribute="leading" secondItem="aGZ-0o-UTy" secondAttribute="leading" id="W8p-Jg-5Pd"/>
+                            <constraint firstItem="UJQ-mG-G9m" firstAttribute="centerX" secondItem="avJ-DH-QXh" secondAttribute="centerX" id="c8p-hl-XsG"/>
+                            <constraint firstItem="S0z-41-n9t" firstAttribute="top" secondItem="aGZ-0o-UTy" secondAttribute="top" id="qWN-4B-5cc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aGZ-0o-UTy"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPassTextfield" destination="6v7-F0-z07" id="lMZ-b4-et2"/>
+                        <outlet property="confirmShowBtn" destination="srt-q9-fGq" id="le2-rx-ti7"/>
+                        <outlet property="currentPassTextField" destination="Aa5-5j-Sm8" id="RXm-WJ-c4q"/>
+                        <outlet property="currentShowBtn" destination="0Wc-Am-l8O" id="tkZ-CT-xRb"/>
+                        <outlet property="newPassTextField" destination="XED-de-ywh" id="uIa-B7-e5f"/>
+                        <outlet property="newShowBtn" destination="ebM-Q6-wP8" id="jMi-hB-sBs"/>
+                        <outlet property="submitBtn" destination="mW5-Zh-JBB" id="cFf-ez-gzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nde-pj-ja9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2541" y="-121"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="f2x-gK-kWM">
+            <objects>
+                <viewController storyboardIdentifier="faqsViewController" title="FAQ" hidesBottomBarWhenPushed="YES" id="ypM-oW-M1E" customClass="faqsViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dyo-pw-MO7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="3300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75s-fe-CzO">
+                                <rect key="frame" x="0.0" y="44" width="375" height="3222"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMu-8I-0r6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="3307.6666666666665"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question1:Does CourseFrenzy offer promotions on online courses?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJW-sn-QuZ">
+                                                <rect key="frame" x="5" y="11.999999999999996" width="365" height="40.666666666666657"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hs0-TX-S8n">
+                                                <rect key="frame" x="5" y="57.666666666666671" width="365" height="122.00000000000001"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer1:CourseFrenzy online courses website often runs up grades that offer courses at low and cheap prices. To be informed about these promotions, you have to make sure you have allowed the website to send you promotional emails.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question2:Pricing on CourseFrenzy?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H9-I2-bTw">
+                                                <rect key="frame" x="5" y="184.66666666666666" width="365" height="20.333333333333343"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxo-dF-UsO">
+                                                <rect key="frame" x="5" y="210" width="365" height="142.33333333333337"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer2:The teacher of the online course fixes the price of the course. However, the site can announce discounts as they please. Once you have bought a course, you can learn it at your own sweet time. You shall have access to the online course as long as you have an account at CourseFrenzy online courses website.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question3:How does CourseFrenzy calculate exchange rates?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33z-LT-mdk">
+                                                <rect key="frame" x="5" y="357.33333333333331" width="365" height="40.666666666666686"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer3:CourseFrenzy online courses website is using a country specific price medium to fix a student’s price." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Spt-j6-pOK">
+                                                <rect key="frame" x="5" y="403" width="365" height="61"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question4:If a course I have registered for gets unpublished, will I still have the right to use the content?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nn3-L5-oRe">
+                                                <rect key="frame" x="5" y="469" width="365" height="61"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXV-rJ-QgC">
+                                                <rect key="frame" x="5" y="535" width="365" height="122"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer4:Absolutely! At CourseFrenzy online courses website, we give you a forever access to all online courses you have registered for. Note that this is only available till you have your CourseFrenzy account. Make sure to log in to your account to attain access to online courses.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9oE-Hv-Rei">
+                                                <rect key="frame" x="5" y="662" width="365" height="81.333333333333371"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">Question5:A course has been bought at a certain price. Later, it is being offered at a lesser price. Can a customer purchase it again for the latter price?</string>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer5:No, a course at CourseFrenzy online courses websiteonce purchased at a specific price shall stick to that price only." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7d7-7G-oeo">
+                                                <rect key="frame" x="5" y="748.33333333333337" width="365" height="61"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question6:What do courses onCourseFrenzy online courses website include?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76g-wG-mh0">
+                                                <rect key="frame" x="5" y="814.33333333333337" width="365" height="61"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSC-w3-XWi">
+                                                <rect key="frame" x="5" y="880.33333333333337" width="365" height="142.33333333333337"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer6:All courses at CourseFrenzy online courses website are created and maintained by the teachers. These online courses include lectures. Lectures can be in the form of video demonstrations, PowerPoint presentations or simple text. Apart from lectures, the instructors are allowed to add quizzes, assignments and other learning exercises.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question7:What are the steps of enrolling in an online course?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="293-l9-28N">
+                                                <rect key="frame" x="5" y="1027.6666666666667" width="365" height="40.666666666666742"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGl-cL-TML">
+                                                <rect key="frame" x="5" y="1073.3333333333333" width="365" height="142.33333333333326"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer7:First step is to find the course of your interest. At CourseFrenzy online courses websiteyou are allowed to complete the course at your own sweet time. After registering, you can begin the online course whenever you want. There is no urgency to start. CourseFrenzy online courses website is available on several devices like PC, laptop, IOS/android applications. After enrolling in a course, you will receive an email. This email will be a confirmation email, giving you your respective course link.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question8:How long do I have to complete CourseFrenzy online courses?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lu-qJ-JHL">
+                                                <rect key="frame" x="5" y="1220.6666666666667" width="365" height="40.666666666666742"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufh-3a-btC">
+                                                <rect key="frame" x="5" y="1266.3333333333333" width="365" height="122"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer8:At CourseFrenzy online courses website there is no specific time for beginning a course or completing it. After getting done with the course, you will still have a lifetime access to it. We believe you’ve bought it and you have the right to view it whenever you like.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question9:Is CourseFrenzy online courses website an accredited platform?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6V-Zj-3Qi">
+                                                <rect key="frame" x="5" y="1393.3333333333333" width="365" height="40.666666666666742"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7b-0f-iN3">
+                                                <rect key="frame" x="5" y="1439" width="365" height="122"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer9:No. CourseFrenzy online courses websiteis not a recognized institute in terms of degree. However, we deliver expert taught courses and also offer certificates at the completion of each course. You can also share your certificates.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question10:Is there any way to check if the chosen course is right for you?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2me-ef-SUh">
+                                                <rect key="frame" x="5" y="1566" width="365" height="40.666666666666742"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cn1-Oy-nVy">
+                                                <rect key="frame" x="5" y="1611.6666666666667" width="365" height="101.66666666666674"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer10:Yes, if you get double minded and cannot decide if the selected course is right for you or not, you can watch a preview. The instructor can choose number of lectures he wants to show in the preview.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question11:What if one doesn’t like the purchased course?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ww-eI-dgq">
+                                                <rect key="frame" x="5" y="1718.3333333333333" width="365" height="40.666666666666742"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS7-9b-z9W">
+                                                <rect key="frame" x="5" y="1764" width="365" height="122"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer11:At CourseFrenzy online courses website, our top priority is the satisfaction of our customers. We want our customers to be happy with the online courses they choose. Therefore, we have a return policy as well. Read more in our privacy policy.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question12:How to begin as an instructor?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRl-uN-8Vh">
+                                                <rect key="frame" x="5" y="1891" width="365" height="20.333333333333258"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NyK-Fv-W0b">
+                                                <rect key="frame" x="5" y="1916.3333333333333" width="365" height="81.333333333333258"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer12:There is a perfect guide on ‘how to become an instructor’ on CourseFrenzy online courses websitepage. If you want to teach or create courses, you’ve come to the right place.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question13:How will I know which courses offer which tests?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AO-Fk-XkI">
+                                                <rect key="frame" x="5" y="2002.6666666666667" width="365" height="40.666666666666742"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWW-uw-Kvg">
+                                                <rect key="frame" x="5" y="2048.3333333333335" width="365" height="81.333333333333485"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer13:When you select a course you will be notified if it includes tests, quizzes or assignments. Also, their quantity will also be stated.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question14:Are there any extra charges for practice tests?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owd-dP-9BT">
+                                                <rect key="frame" x="5" y="2134.6666666666665" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCA-Yn-cft">
+                                                <rect key="frame" x="5" y="2180.3333333333335" width="365" height="101.66666666666652"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer14:No. At CourseFrenzy online courses website, when you purchase an online course, you purchase all quizzes and tests with it. There are no hidden charges forests. Every test shall be included in the stated fee.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question15:Can I re take the practice test if I wish to?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZk-l6-ioU">
+                                                <rect key="frame" x="5" y="2287" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Taa-Dp-eA1">
+                                                <rect key="frame" x="5" y="2332.6666666666665" width="365" height="101.66666666666652"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer15:Definitely.You can retake the practice test as many times as you want to. At the end of every practice test an option of retaking shall be given. All you have to do is click that option and retake the test.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question16:Will I be notified about taking more time than specified for a practice test?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPH-LG-PtF">
+                                                <rect key="frame" x="5" y="2439.3333333333335" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSn-jQ-kXv">
+                                                <rect key="frame" x="5" y="2485" width="365" height="122"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer16:Yes, the practice test at CourseFrenzy online courses websitehas timers to check if you are able to match the time allotted for a certain test. If you exceed the given time, the practice test will notify and alert you.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question17:Can I pause a practice test or do I have to complete it in one go?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SD6-zE-Giy">
+                                                <rect key="frame" x="5" y="2612" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwO-xZ-kms">
+                                                <rect key="frame" x="5" y="2657.6666666666665" width="365" height="81.333333333333485"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer17:You can pause your practice test if you wish to. You can take a break and do other work. The timer will also stop. When you’re ready and you wish to resume it, you can.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question18:How should one submit his answer?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90B-oJ-cxE">
+                                                <rect key="frame" x="5" y="2744" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXU-G3-AHA">
+                                                <rect key="frame" x="5" y="2789.6666666666665" width="365" height="101.66666666666652"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer18:First, you should select an answer. Second, click on the ‘next’ button. Your answer will get submitted and a new question will appear on the screen. You are now to repeat the above steps.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question19:Will my final score get disclosed?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-hH-ZwI">
+                                                <rect key="frame" x="5" y="2896.3333333333335" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jB6-Hv-MGp">
+                                                <rect key="frame" x="5" y="2942" width="365" height="81.333333333333485"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer19:As soon as you conclude you practice test, your final score will be posted. It will also show you the number of questions answered correctly or incorrectly.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question20:Can I check my answers after a quiz?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTB-1Q-2Xk">
+                                                <rect key="frame" x="5" y="3028.3333333333335" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWP-sD-ZQw">
+                                                <rect key="frame" x="5" y="3074" width="365" height="81.333333333333485"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <string key="text">Answer20:Yes, at CourseFrenzy online courses website, you are allowed to review your answers to see which question you got right or wrong.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question21:Do practice test online courses offer completion certificates?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmE-Cm-oIF">
+                                                <rect key="frame" x="5" y="3160.3333333333335" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer21:Online courses having only practice tests do not offer certificates of completion." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ3-ft-LaQ">
+                                                <rect key="frame" x="5" y="3206" width="365" height="40.666666666666515"/>
+                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="oGl-cL-TML" secondAttribute="trailing" constant="5" id="0Ev-bh-QYE"/>
+                                            <constraint firstAttribute="trailing" secondItem="JmE-Cm-oIF" secondAttribute="trailing" constant="5" id="0VQ-Tm-5hg"/>
+                                            <constraint firstItem="PWP-sD-ZQw" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="0n5-JJ-Wah"/>
+                                            <constraint firstItem="hs0-TX-S8n" firstAttribute="top" secondItem="uJW-sn-QuZ" secondAttribute="bottom" constant="5" id="1Bd-vD-S1T"/>
+                                            <constraint firstItem="owd-dP-9BT" firstAttribute="top" secondItem="AWW-uw-Kvg" secondAttribute="bottom" constant="5" id="26D-su-Z3t"/>
+                                            <constraint firstItem="WZk-l6-ioU" firstAttribute="top" secondItem="xCA-Yn-cft" secondAttribute="bottom" constant="5" id="2Db-ha-b8T"/>
+                                            <constraint firstItem="2me-ef-SUh" firstAttribute="top" secondItem="Q7b-0f-iN3" secondAttribute="bottom" constant="5" id="2sQ-JF-RVE"/>
+                                            <constraint firstItem="7d7-7G-oeo" firstAttribute="top" secondItem="9oE-Hv-Rei" secondAttribute="bottom" constant="5" id="2tt-GD-Qh2"/>
+                                            <constraint firstAttribute="trailing" secondItem="uJW-sn-QuZ" secondAttribute="trailing" constant="5" id="36h-Pa-30e"/>
+                                            <constraint firstItem="8H9-I2-bTw" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="43b-2p-HYj"/>
+                                            <constraint firstAttribute="trailing" secondItem="xCA-Yn-cft" secondAttribute="trailing" constant="5" id="4BE-dA-gjJ"/>
+                                            <constraint firstItem="Q7b-0f-iN3" firstAttribute="top" secondItem="V6V-Zj-3Qi" secondAttribute="bottom" constant="5" id="4JM-mq-KEv"/>
+                                            <constraint firstItem="9oE-Hv-Rei" firstAttribute="top" secondItem="YXV-rJ-QgC" secondAttribute="bottom" constant="5" id="4JV-uK-yFG"/>
+                                            <constraint firstItem="5lu-qJ-JHL" firstAttribute="top" secondItem="oGl-cL-TML" secondAttribute="bottom" constant="5" id="4TL-7x-5nW"/>
+                                            <constraint firstItem="JhV-hH-ZwI" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="5aR-XT-8w9"/>
+                                            <constraint firstItem="WZk-l6-ioU" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="6MW-nR-EGG"/>
+                                            <constraint firstItem="xCA-Yn-cft" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="7lu-5i-MKk"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ufh-3a-btC" secondAttribute="trailing" constant="5" id="94O-yP-7Gp"/>
+                                            <constraint firstItem="pxo-dF-UsO" firstAttribute="top" secondItem="8H9-I2-bTw" secondAttribute="bottom" constant="5" id="96A-BF-20H"/>
+                                            <constraint firstAttribute="trailing" secondItem="293-l9-28N" secondAttribute="trailing" constant="5" id="9EX-dv-z7b"/>
+                                            <constraint firstItem="hs0-TX-S8n" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="9g4-vK-IDc"/>
+                                            <constraint firstAttribute="trailing" secondItem="JhV-hH-ZwI" secondAttribute="trailing" constant="5" id="9jb-mj-BHw"/>
+                                            <constraint firstItem="AS7-9b-z9W" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="Awu-Gx-bCM"/>
+                                            <constraint firstAttribute="trailing" secondItem="FSn-jQ-kXv" secondAttribute="trailing" constant="5" id="BT7-WU-e06"/>
+                                            <constraint firstAttribute="trailing" secondItem="jB6-Hv-MGp" secondAttribute="trailing" constant="5" id="BWD-hv-lr5"/>
+                                            <constraint firstAttribute="trailing" secondItem="Q7b-0f-iN3" secondAttribute="trailing" constant="5" id="BYV-la-yTt"/>
+                                            <constraint firstItem="AS7-9b-z9W" firstAttribute="top" secondItem="6Ww-eI-dgq" secondAttribute="bottom" constant="5" id="CH5-LI-pgt"/>
+                                            <constraint firstAttribute="trailing" secondItem="9oE-Hv-Rei" secondAttribute="trailing" constant="5" id="CbB-MV-0ek"/>
+                                            <constraint firstItem="fXU-G3-AHA" firstAttribute="top" secondItem="90B-oJ-cxE" secondAttribute="bottom" constant="5" id="CtF-Hq-Dvn"/>
+                                            <constraint firstItem="JmE-Cm-oIF" firstAttribute="top" secondItem="PWP-sD-ZQw" secondAttribute="bottom" constant="5" id="D4W-CY-gWl"/>
+                                            <constraint firstItem="xCA-Yn-cft" firstAttribute="top" secondItem="owd-dP-9BT" secondAttribute="bottom" constant="5" id="De2-K8-cxt"/>
+                                            <constraint firstAttribute="trailing" secondItem="2me-ef-SUh" secondAttribute="trailing" constant="5" id="EnZ-87-MVF"/>
+                                            <constraint firstItem="YXV-rJ-QgC" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="FF8-Bv-gBQ"/>
+                                            <constraint firstItem="oGl-cL-TML" firstAttribute="top" secondItem="293-l9-28N" secondAttribute="bottom" constant="5" id="FR4-ei-C7X"/>
+                                            <constraint firstItem="PWP-sD-ZQw" firstAttribute="top" secondItem="UTB-1Q-2Xk" secondAttribute="bottom" constant="5" id="Flk-wz-jEz"/>
+                                            <constraint firstItem="cn1-Oy-nVy" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="FoA-K1-pIn"/>
+                                            <constraint firstItem="EwO-xZ-kms" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="FqI-L2-AL5"/>
+                                            <constraint firstItem="5lu-qJ-JHL" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="H4S-hf-ljy"/>
+                                            <constraint firstAttribute="bottom" secondItem="qJ3-ft-LaQ" secondAttribute="bottom" constant="61" id="HL7-9x-jXo"/>
+                                            <constraint firstAttribute="trailing" secondItem="Spt-j6-pOK" secondAttribute="trailing" constant="5" id="HhD-mL-mCa"/>
+                                            <constraint firstAttribute="trailing" secondItem="76g-wG-mh0" secondAttribute="trailing" constant="5" id="I1z-sf-KCB"/>
+                                            <constraint firstAttribute="trailing" secondItem="YXV-rJ-QgC" secondAttribute="trailing" constant="5" id="I5j-M3-iDC"/>
+                                            <constraint firstItem="uJW-sn-QuZ" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="IlE-vS-otd"/>
+                                            <constraint firstItem="Taa-Dp-eA1" firstAttribute="top" secondItem="WZk-l6-ioU" secondAttribute="bottom" constant="5" id="JOF-YB-fPI"/>
+                                            <constraint firstItem="8H9-I2-bTw" firstAttribute="top" secondItem="hs0-TX-S8n" secondAttribute="bottom" constant="5" id="KD2-GH-oQJ"/>
+                                            <constraint firstItem="fXU-G3-AHA" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="Klk-Oy-vdC"/>
+                                            <constraint firstAttribute="trailing" secondItem="owd-dP-9BT" secondAttribute="trailing" constant="5" id="LF3-3J-gVR"/>
+                                            <constraint firstAttribute="trailing" secondItem="4AO-Fk-XkI" secondAttribute="trailing" constant="5" id="LM0-wL-YpX"/>
+                                            <constraint firstAttribute="trailing" secondItem="AWW-uw-Kvg" secondAttribute="trailing" constant="5" id="LdZ-pi-kA7"/>
+                                            <constraint firstAttribute="trailing" secondItem="6Ww-eI-dgq" secondAttribute="trailing" constant="5" id="Lno-fH-fPI"/>
+                                            <constraint firstItem="jB6-Hv-MGp" firstAttribute="top" secondItem="JhV-hH-ZwI" secondAttribute="bottom" constant="5" id="M1E-5o-yna"/>
+                                            <constraint firstAttribute="trailing" secondItem="V6V-Zj-3Qi" secondAttribute="trailing" constant="5" id="MkE-rf-Re0"/>
+                                            <constraint firstItem="oGl-cL-TML" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="NZl-dg-RGq"/>
+                                            <constraint firstItem="293-l9-28N" firstAttribute="top" secondItem="bSC-w3-XWi" secondAttribute="bottom" constant="5" id="Nmy-aS-yJJ"/>
+                                            <constraint firstItem="qJ3-ft-LaQ" firstAttribute="top" secondItem="JmE-Cm-oIF" secondAttribute="bottom" constant="5" id="O7r-RN-MM9"/>
+                                            <constraint firstAttribute="trailing" secondItem="fXU-G3-AHA" secondAttribute="trailing" constant="5" id="OXx-Ul-NWs"/>
+                                            <constraint firstItem="NyK-Fv-W0b" firstAttribute="top" secondItem="ZRl-uN-8Vh" secondAttribute="bottom" constant="5" id="Opv-W7-UEu"/>
+                                            <constraint firstItem="90B-oJ-cxE" firstAttribute="top" secondItem="EwO-xZ-kms" secondAttribute="bottom" constant="5" id="P6s-jX-cs6"/>
+                                            <constraint firstItem="4AO-Fk-XkI" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="PYl-O3-ezx"/>
+                                            <constraint firstItem="33z-LT-mdk" firstAttribute="top" secondItem="pxo-dF-UsO" secondAttribute="bottom" constant="5" id="QVc-WL-UIo"/>
+                                            <constraint firstAttribute="trailing" secondItem="7d7-7G-oeo" secondAttribute="trailing" constant="5" id="QhD-Hv-jof"/>
+                                            <constraint firstItem="Spt-j6-pOK" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="Qk8-Hz-lST"/>
+                                            <constraint firstItem="2me-ef-SUh" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="Rxe-6c-EN8"/>
+                                            <constraint firstItem="nn3-L5-oRe" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="SW8-mO-J8F"/>
+                                            <constraint firstItem="FSn-jQ-kXv" firstAttribute="top" secondItem="xPH-LG-PtF" secondAttribute="bottom" constant="5" id="T5U-bi-hCD"/>
+                                            <constraint firstItem="V6V-Zj-3Qi" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="UKH-vo-eO5"/>
+                                            <constraint firstItem="V6V-Zj-3Qi" firstAttribute="top" secondItem="Ufh-3a-btC" secondAttribute="bottom" constant="5" id="USw-rB-79v"/>
+                                            <constraint firstItem="JmE-Cm-oIF" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="VvN-P0-RlM"/>
+                                            <constraint firstAttribute="trailing" secondItem="90B-oJ-cxE" secondAttribute="trailing" constant="5" id="XC3-tx-Qqh"/>
+                                            <constraint firstItem="UTB-1Q-2Xk" firstAttribute="top" secondItem="jB6-Hv-MGp" secondAttribute="bottom" constant="5" id="Xol-9j-Mhl"/>
+                                            <constraint firstItem="cn1-Oy-nVy" firstAttribute="top" secondItem="2me-ef-SUh" secondAttribute="bottom" constant="5" id="YYH-DM-9gH"/>
+                                            <constraint firstItem="AWW-uw-Kvg" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="YrW-Xd-g5X"/>
+                                            <constraint firstAttribute="trailing" secondItem="NyK-Fv-W0b" secondAttribute="trailing" constant="5" id="ZDG-eI-Clq"/>
+                                            <constraint firstItem="qJ3-ft-LaQ" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="aFs-zC-XlN"/>
+                                            <constraint firstItem="EwO-xZ-kms" firstAttribute="top" secondItem="SD6-zE-Giy" secondAttribute="bottom" constant="5" id="aVg-8q-cSn"/>
+                                            <constraint firstAttribute="trailing" secondItem="EwO-xZ-kms" secondAttribute="trailing" constant="5" id="c2E-5n-wU3"/>
+                                            <constraint firstItem="owd-dP-9BT" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="cuf-Cx-YJZ"/>
+                                            <constraint firstItem="SD6-zE-Giy" firstAttribute="top" secondItem="FSn-jQ-kXv" secondAttribute="bottom" constant="5" id="d8d-OH-IAm"/>
+                                            <constraint firstAttribute="trailing" secondItem="nn3-L5-oRe" secondAttribute="trailing" constant="5" id="dC1-kg-t7e"/>
+                                            <constraint firstAttribute="trailing" secondItem="hs0-TX-S8n" secondAttribute="trailing" constant="5" id="dNg-E8-7Zb"/>
+                                            <constraint firstItem="jB6-Hv-MGp" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="ehh-6B-qla"/>
+                                            <constraint firstAttribute="trailing" secondItem="xPH-LG-PtF" secondAttribute="trailing" constant="5" id="ehx-JV-ECO"/>
+                                            <constraint firstItem="ZRl-uN-8Vh" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="g9g-ON-6nh"/>
+                                            <constraint firstItem="Spt-j6-pOK" firstAttribute="top" secondItem="33z-LT-mdk" secondAttribute="bottom" constant="5" id="h3J-yZ-ugG"/>
+                                            <constraint firstAttribute="trailing" secondItem="AS7-9b-z9W" secondAttribute="trailing" constant="5" id="h7K-6d-bry"/>
+                                            <constraint firstItem="Ufh-3a-btC" firstAttribute="top" secondItem="5lu-qJ-JHL" secondAttribute="bottom" constant="5" id="hPO-dm-QDo"/>
+                                            <constraint firstItem="AWW-uw-Kvg" firstAttribute="top" secondItem="4AO-Fk-XkI" secondAttribute="bottom" constant="5" id="hRO-yc-Njc"/>
+                                            <constraint firstItem="xPH-LG-PtF" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="i60-pW-xnC"/>
+                                            <constraint firstItem="bSC-w3-XWi" firstAttribute="top" secondItem="76g-wG-mh0" secondAttribute="bottom" constant="5" id="iJN-PL-fQ1"/>
+                                            <constraint firstItem="4AO-Fk-XkI" firstAttribute="top" secondItem="NyK-Fv-W0b" secondAttribute="bottom" constant="5" id="iLM-D4-XVc"/>
+                                            <constraint firstAttribute="trailing" secondItem="5lu-qJ-JHL" secondAttribute="trailing" constant="5" id="iW7-Bl-emf"/>
+                                            <constraint firstItem="NyK-Fv-W0b" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="j2x-Vo-2B9"/>
+                                            <constraint firstItem="YXV-rJ-QgC" firstAttribute="top" secondItem="nn3-L5-oRe" secondAttribute="bottom" constant="5" id="jBC-7D-2f2"/>
+                                            <constraint firstItem="90B-oJ-cxE" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="jBJ-rw-eHB"/>
+                                            <constraint firstItem="Q7b-0f-iN3" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="jMB-Hs-Nld"/>
+                                            <constraint firstItem="pxo-dF-UsO" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="kla-sR-kyF"/>
+                                            <constraint firstAttribute="trailing" secondItem="Taa-Dp-eA1" secondAttribute="trailing" constant="5" id="lF4-NG-wOi"/>
+                                            <constraint firstAttribute="trailing" secondItem="WZk-l6-ioU" secondAttribute="trailing" constant="5" id="mE5-Sq-5vy"/>
+                                            <constraint firstItem="bSC-w3-XWi" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="mRu-qu-OXo"/>
+                                            <constraint firstItem="33z-LT-mdk" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="nlP-oS-oTD"/>
+                                            <constraint firstItem="ZRl-uN-8Vh" firstAttribute="top" secondItem="AS7-9b-z9W" secondAttribute="bottom" constant="5" id="nmP-1p-Rxf"/>
+                                            <constraint firstItem="uJW-sn-QuZ" firstAttribute="top" secondItem="EMu-8I-0r6" secondAttribute="top" constant="12" id="o0y-gI-Zeq"/>
+                                            <constraint firstAttribute="trailing" secondItem="cn1-Oy-nVy" secondAttribute="trailing" constant="5" id="p7F-bh-g9M"/>
+                                            <constraint firstItem="6Ww-eI-dgq" firstAttribute="top" secondItem="cn1-Oy-nVy" secondAttribute="bottom" constant="5" id="pCz-ov-XU9"/>
+                                            <constraint firstItem="7d7-7G-oeo" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="pIC-Cf-66o"/>
+                                            <constraint firstAttribute="trailing" secondItem="bSC-w3-XWi" secondAttribute="trailing" constant="5" id="pjp-en-MgR"/>
+                                            <constraint firstItem="nn3-L5-oRe" firstAttribute="top" secondItem="Spt-j6-pOK" secondAttribute="bottom" constant="5" id="qBa-Hx-l99"/>
+                                            <constraint firstItem="6Ww-eI-dgq" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="qHW-SU-SkT"/>
+                                            <constraint firstItem="293-l9-28N" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="r5W-bQ-vox"/>
+                                            <constraint firstAttribute="trailing" secondItem="pxo-dF-UsO" secondAttribute="trailing" constant="5" id="rTr-tP-B1O"/>
+                                            <constraint firstAttribute="trailing" secondItem="33z-LT-mdk" secondAttribute="trailing" constant="5" id="sP3-v5-Di7"/>
+                                            <constraint firstAttribute="trailing" secondItem="UTB-1Q-2Xk" secondAttribute="trailing" constant="5" id="sqt-Sg-X0O"/>
+                                            <constraint firstItem="xPH-LG-PtF" firstAttribute="top" secondItem="Taa-Dp-eA1" secondAttribute="bottom" constant="5" id="szZ-sW-h2u"/>
+                                            <constraint firstItem="Taa-Dp-eA1" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="tIt-t4-21w"/>
+                                            <constraint firstItem="UTB-1Q-2Xk" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="tUL-CH-sgD"/>
+                                            <constraint firstAttribute="trailing" secondItem="qJ3-ft-LaQ" secondAttribute="trailing" constant="5" id="td8-Qf-EKm"/>
+                                            <constraint firstItem="JhV-hH-ZwI" firstAttribute="top" secondItem="fXU-G3-AHA" secondAttribute="bottom" constant="5" id="uYv-dg-l50"/>
+                                            <constraint firstItem="FSn-jQ-kXv" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="vTb-jM-IAR"/>
+                                            <constraint firstItem="Ufh-3a-btC" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="vjn-yu-pVD"/>
+                                            <constraint firstAttribute="trailing" secondItem="PWP-sD-ZQw" secondAttribute="trailing" constant="5" id="wQq-Ql-0aL"/>
+                                            <constraint firstItem="76g-wG-mh0" firstAttribute="top" secondItem="7d7-7G-oeo" secondAttribute="bottom" constant="5" id="wXt-Bz-D0f"/>
+                                            <constraint firstItem="9oE-Hv-Rei" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="wqa-Py-nzC"/>
+                                            <constraint firstItem="76g-wG-mh0" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="xDh-su-k0O"/>
+                                            <constraint firstAttribute="trailing" secondItem="8H9-I2-bTw" secondAttribute="trailing" constant="5" id="ypH-dd-VJP"/>
+                                            <constraint firstItem="SD6-zE-Giy" firstAttribute="leading" secondItem="EMu-8I-0r6" secondAttribute="leading" constant="5" id="z2v-cc-bzR"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZRl-uN-8Vh" secondAttribute="trailing" constant="5" id="z5R-26-Gvk"/>
+                                            <constraint firstAttribute="trailing" secondItem="SD6-zE-Giy" secondAttribute="trailing" constant="5" id="zBr-ke-iKa"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EMu-8I-0r6" firstAttribute="leading" secondItem="75s-fe-CzO" secondAttribute="leading" id="95I-N1-ejb"/>
+                                    <constraint firstItem="EMu-8I-0r6" firstAttribute="top" secondItem="75s-fe-CzO" secondAttribute="top" id="RPk-Bz-PsM"/>
+                                    <constraint firstAttribute="bottom" secondItem="EMu-8I-0r6" secondAttribute="bottom" id="S9u-av-mS5"/>
+                                    <constraint firstAttribute="trailing" secondItem="EMu-8I-0r6" secondAttribute="trailing" id="lMK-ju-Iak"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EMu-8I-0r6" firstAttribute="width" secondItem="dyo-pw-MO7" secondAttribute="width" id="3iC-HX-bVg"/>
+                            <constraint firstItem="75s-fe-CzO" firstAttribute="leading" secondItem="rDd-KB-P9B" secondAttribute="leading" id="Hzy-AO-DR2"/>
+                            <constraint firstItem="rDd-KB-P9B" firstAttribute="trailing" secondItem="75s-fe-CzO" secondAttribute="trailing" id="fCz-uS-h4h"/>
+                            <constraint firstItem="rDd-KB-P9B" firstAttribute="bottom" secondItem="75s-fe-CzO" secondAttribute="bottom" id="i5s-EW-0Eh"/>
+                            <constraint firstItem="75s-fe-CzO" firstAttribute="top" secondItem="rDd-KB-P9B" secondAttribute="top" id="jRC-yK-GkA"/>
+                            <constraint firstItem="EMu-8I-0r6" firstAttribute="height" secondItem="dyo-pw-MO7" secondAttribute="height" priority="250" id="yJD-as-hvl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rDd-KB-P9B"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="3300"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33j-7c-zew" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1825" y="683"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="byr-4F-hQb">
+            <objects>
+                <viewController storyboardIdentifier="privacyPolicyViewController" title="Privacy Policy" hidesBottomBarWhenPushed="YES" id="SRc-Mo-5PL" customClass="privacyPolicyViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vuF-W5-L7E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDr-ZQ-Wbj">
+                                <rect key="frame" x="10.333333333333343" y="22.333333333333314" width="393.33333333333326" height="851.33333333333348"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="euP-js-wm1">
+                                        <rect key="frame" x="0.0" y="10" width="393.33333333333331" height="841.33333333333337"/>
+                                        <color key="backgroundColor" white="0.9658203125" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">
+1.	Personal information:
+
+•	What Personal information is required?
+
+A student/instructor’s name, email and credit card details are required. 
+
+•	When is the information collected? 
+
+When a student registers on our site he is only asked to give his name and email. Afterwards for transfer of money he is to provide his credit card information. It is mandatory for the instructor to provide name, email and credit card information for money transactions.  
+
+•	Why this information is collected?
+
+This information is collected to; 
+
+personalize user’s experience 
+improve customer service
+Administer contests, surveys and promotions
+Process transactions
+Reviews 
+Follow ups 
+Periodic emails
+2.	Information protection
+
+•	Our website is PCI compliant. 
+
+•	Malware scans take place in our website regularly. 
+
+•	Also, our website is SSL certified.
+
+We implement security measures when a student/instructor enters, submits or accesses information at our site.
+
+Is your information stored? 
+Your information is stored in our systems for more than 60 days. It can be authorized with access rights
+
+3.	Cookies?
+
+We use cookies to;
+
+Help remember and process your number of courses
+Understand and save user’s preferences for future visits
+Keep track of advertisements
+Compile aggregate data about site traffic and site interactions in order to offer better site experiences and tools in the future
+We may also use trusted third-party services that track this information on our behalf.
+•	Disable
+
+If users disable cookies in their browsers, it will turn off some of the features of the site.
+
+4.	Third party links 
+
+We do not include or offer third-party products or services on our website. 
+
+5.	Disclosure of third party
+
+We transfer Personal Information to outside parties for money transactions. We do not sell, trade, or otherwise transfer to outside parties’ personal information. We provide students with notice that their credit card details are to be disclosed. These details are given to money transfer companies like PayPal etcetera. 
+
+However, this does not include website hosting partners and other parties who assist us in operating our website, conducting our business, or serving our users, so long as those parties agree to keep the student/instructor’s information confidential. We may also release information when its release is appropriate to comply with the law, enforce our site policies, or protect ours or others' rights, property or safety. 
+
+6.	Under CalOPPA (California Online Privacy Protection Act)
+
+Our website is in complaint with CalOPPA. Under CalOPPA;
+
+Users can visit our site anonymously.
+Once this privacy policy is created, we will add a link to it on our home page or as a minimum on the first significant page after entering our website.
+Our Privacy Policy link includes the word "Privacy" and can easily be found on the page specified above.
+Users will be notified of any privacy policy changes.
+Users are able to update their personal information.
+ 
+
+7.	Age limit
+
+There is no age limit for students on this platform. Instructors are judged on their experience and intellect. At CourseFrenzy age is just a number.
+
+8. FTC’s Fair information practice
+
+•	What does the site do when data is breached? 
+
+Fair Information Practices is to have an action plan for notifying your users, if a data breach occurs.
+
+In case of data breach we take a responsive action i.e. notify the user via email within 7 business days
+
+9. Bidding
+
+How it works?
+This is our unique feature. Instructors put up courses for auction. Students are to place bids on the course of their interest. The one with the highest bid shall get the course.
+
+Maximum/minimum number of bids
+Unlimited bids can be made by one student. Unlimited courses can be put up by instructors.
+Time limit:
+The instructor shall specify the ending time of bidding. Time limit of bidding on a course may vary from instructor to instructor.
+Commitment
+Once you’ve placed your bid and won, you cannot withdraw from the course.
+
+10. Contact information
+
+14681 Midway Rd Set 200 Addison TX 75001
+Voice: +1-214-302-7330
+Our contact information can also be found;
+
+On our Home page
+On our terms and conditions page</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="euP-js-wm1" secondAttribute="bottom" id="AkJ-BX-f8q"/>
+                                    <constraint firstItem="euP-js-wm1" firstAttribute="leading" secondItem="sDr-ZQ-Wbj" secondAttribute="leading" id="NhC-fX-1RF"/>
+                                    <constraint firstAttribute="trailing" secondItem="euP-js-wm1" secondAttribute="trailing" id="c4y-84-Jdp"/>
+                                    <constraint firstItem="euP-js-wm1" firstAttribute="top" secondItem="sDr-ZQ-Wbj" secondAttribute="top" constant="10" id="jfI-Dz-Kjd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sDr-ZQ-Wbj" firstAttribute="centerX" secondItem="AZM-vb-th0" secondAttribute="centerX" id="0bI-wa-XsR"/>
+                            <constraint firstItem="sDr-ZQ-Wbj" firstAttribute="height" secondItem="vuF-W5-L7E" secondAttribute="height" multiplier="0.95" id="J5f-qS-iS0"/>
+                            <constraint firstItem="sDr-ZQ-Wbj" firstAttribute="width" secondItem="vuF-W5-L7E" secondAttribute="width" multiplier="0.95" id="XfI-jW-4oy"/>
+                            <constraint firstItem="sDr-ZQ-Wbj" firstAttribute="centerY" secondItem="vuF-W5-L7E" secondAttribute="centerY" id="tsg-fA-Beq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AZM-vb-th0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6F-TF-UGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3271" y="688"/>
+        </scene>
+        <!--Terms Of Use-->
+        <scene sceneID="6ZV-p0-SdJ">
+            <objects>
+                <viewController storyboardIdentifier="TermsOfUseViewController" title="Terms Of Use" hidesBottomBarWhenPushed="YES" id="NzR-j8-tuj" customClass="TermsOfUseViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lHw-bc-wVC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ch2-5f-Leg">
+                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="nf2-Wd-gRw">
+                                        <rect key="frame" x="8" y="10" width="382" height="784"/>
+                                        <color key="backgroundColor" red="0.94711690989999997" green="0.94711690989999997" blue="0.94711690989999997" alpha="0.83920162669999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">Introduction :
+
+These terms and conditions tie us and you together in an argument. These terms are put forward concerning your usage of CourseFrenzy website and applications .You are bound by these terms after you sign up for CourseFrenzy. Disagreeing to these terms simply means that you cannot avail our services.
+
+IMPORTANT NOTE
+
+Pre-settlement
+
+If you check ‘agree with terms and conditions’, you agree to settle any clashes outside court. You are thoroughly aware that you cannot take any dispute to court. All negotiations are to be made by CourseFrenzy and you.
+
+Personal information
+
+Any conflict regarding your personal information is mentioned in our Privacy Policy in detail. We shall use it as reference. It is advised to look up our Privacy Policy before agreeing to our Terms.
+
+General :
+
+We provide services that allow students to connect with their instructors and vice versa. The instructors deliver live and recorded videos. These videos are a complete code of a student’s respective course. It is the instructor’s job to present the chosen course, enlighten the student and answer queries. 
+The Privacy Policy and Terms and conditions may alter. We may establish new rules and policies. We advise you to keep a check. We reserve the privilege to alter and amend our terms and policies. The changes made will come in action from the very day they are done. 
+If you do not discontinue the use of CourseFrenzy after alteration in terms, it is understood that you agree to them. It is advisable to visit the terms and policies pages from time to time to ensure there are no terms you disagree with. 
+CourseFrenzy has the right to terminate their availability at any time. 
+Any charges of contact, service, internet or anypayments are only up to you. The website is not responsible for the dues. You are in charge of any devices required and use of telephone credit. 
+If you choose a course, you agree to pay the specified charges for it. Only you will be held responsible for the dues and taxes. Also, if you specify your credit card details fees then you allow CourseFrenzy to charge it for your fees. 
+In case of any delay in your fees, we are allowed to collect this payment by other means. We can charge any payment method mentioned by you. We may also issue legal warnings. We can also block your use at CourseFrenzy and block you from using any pending services. 
+All rules and regulations of the application are to be followed whilst performing any task on the application. Access to our services from places where content is illegal is not allowed. People who are using these services from outside USA are responsible for their usage.
+
+General Disclaimer :
+
+The Services are only a global platform for instructors and students. We do not employ instructors nor are weaccountable or answerable for any collaboration between the instructors and the students who buy an instructor's course via the services. We are not liable for arguments, statements, damages, harms, or destruction of any kind that might arise out of or relate to conduct of instructors or students, including, but not limited to, any student's dependence upon any information provided by an instructor. 
+We do not regulate succumbed content posted on the services and, as such, do not assure in any manner the dependability, rationality, correctness or honesty of such submitted content. You also recognize that by using the services, CourseFrenzy may uncover you to submitted content that you consider attacking, impolite, or unpleasant. CourseFrenzy has no duty to keep such content from you and no obligation for your contact or use of any submitted content, to the extent allowable under applicable law.
+
+Conduct :
+
+You may only access the services for legal purposes. You are exclusivelyanswerable for the information of and devotionto any and all laws regulations relating to your usage of the services. You approve not to use the services or the company content to convert or contact in any form, instructors or potential users for service or contracting for a commercial business not allied with us or deprived of our advance printedagreement, which may be withheld in our solitarywill. You accept any and all risks from any meetings between you and any instructors or other users of the Services.
+
+Trademarks :
+
+The trademark are used and shown through our services or in any Company Content are our listed or unregistered Trademarks or of our suppliers or third parties and are secure pursuant to U.S. and overseas trademark laws. All rights are kept and You may not modify the Trademarks, or associate to them without our earlier agreement.
+
+Indemnification :
+
+You hereby insure, protect and embrace not hurtful CourseFrenzy, and its associates, constables, managers, representatives, allies, workers, licensors, councils and third party providers from and against all sensiblypredictabledamages, expenditures, injuries, charges, privileges and hassles, including reasonable lawyers' fees and related charges and payments, due to or arising out of your opening of any representation or contract hereunder. We reserve the right, at our own expense, to undertake the exclusive security and governing of any matter otherwise subject to indemnification by you under this Section 14, and in such case, you settle to fully collaborate as equitablynecessary with such protection and in declaring any accessible defenses.
+
+No Class Actions
+We and you accept that only statement can be given against each other. A person is an individual; he cannot be an accuser and a class student. If both parties do not agree then the arbitrator cannot take two claims. It is up to the arbitrator if he adds tis clause in the agreement.
+
+Arbitration :
+
+Matters of difference and disagreement under $10,000 shall be solved without entering a court. The party that decides and files arbitration shall also fill demand with the AAA i.e. American Arbitration Association. All activities during arbitration shall be administrated by AAA rules. There will be no appearance unless it is required. AAA rules shall give the decision.
+
+Courts :
+
+If any matter is to be taken inside the court, you accept that for any dispute matters shall be taken to the local courts. This will only happen if the matter remains unsolvable between CourseFrenzy and you.
+
+Changes :
+
+If you do not agree with any alteration in terms, you simply have to send a notice or e-mail to CourseFrenzy. This email should inform clearly your name, address, reason to disagree with changes in terms and when would you like to discontinue.
+
+Health Courses :
+
+There may be a risk to take up a health course at CourseFrenzy. Despite that, if you choose one for yourself, you acknowledge that there are risks and dangers involved. You accept that you have selected these courses willingly. However, we recommend you to check with your physician before applying any techniques learned. You also accept that there are major risks involved that can cause damages. We advise you to take every safety measure and obey the rules you are given. You accept that in case of any injury, you are to be held fully responsible and that none of the instructors, developers, writers or website owner has any part in causing damage to you. You have to ensure that you don’t have a medical condition that is not fit for the course. You also have to make sure you are free from any medical and physical danger.You acknowledge that you have not been stopped by your physician from engaging in physical exercise. Also, you accept that you are aware of being at risk and should not enroll in the course.
+
+Bidding :
+
+This is our unique feature. Instructors put up courses for auction. Students are to place bids on the course of their interest. The one with the highest bid shall get the course. 
+Unlimited bids can be made by one student. Unlimited courses can be put up by instructors. 
+The instructor shall specify the ending time of bidding. Time limit of bidding on a course may vary from instructor to instructor. 
+Once you’ve placed your bid and won, you cannot withdraw from the course.
+
+Contact information
+
+14681 Midway Rd Ste 200 Addison TX 75001 
++1-214-302-7330
+
+
+</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="nf2-Wd-gRw" firstAttribute="leading" secondItem="ch2-5f-Leg" secondAttribute="leading" constant="8" id="0cj-0w-EaF"/>
+                                    <constraint firstAttribute="bottom" secondItem="nf2-Wd-gRw" secondAttribute="bottom" constant="8" id="UXV-aO-Mlj"/>
+                                    <constraint firstAttribute="trailing" secondItem="nf2-Wd-gRw" secondAttribute="trailing" constant="8" id="aKP-mu-op8"/>
+                                    <constraint firstItem="nf2-Wd-gRw" firstAttribute="top" secondItem="ch2-5f-Leg" secondAttribute="top" constant="10" id="etg-6p-kHw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ch2-5f-Leg" firstAttribute="top" secondItem="p6A-E8-k94" secondAttribute="top" constant="8" id="5XJ-50-WRU"/>
+                            <constraint firstItem="p6A-E8-k94" firstAttribute="trailing" secondItem="ch2-5f-Leg" secondAttribute="trailing" constant="8" id="9A9-bI-dtc"/>
+                            <constraint firstItem="p6A-E8-k94" firstAttribute="bottom" secondItem="ch2-5f-Leg" secondAttribute="bottom" constant="8" id="ad5-D8-6Mt"/>
+                            <constraint firstItem="ch2-5f-Leg" firstAttribute="leading" secondItem="p6A-E8-k94" secondAttribute="leading" constant="8" id="mTm-RU-G4g"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p6A-E8-k94"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPF-AZ-Dmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2542" y="688"/>
+        </scene>
+        <!--Contact Us-->
+        <scene sceneID="86K-xX-WFt">
+            <objects>
+                <viewController storyboardIdentifier="ContactUsViewController" title="Contact Us" hidesBottomBarWhenPushed="YES" id="NQi-Di-nci" customClass="ContactUsViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iAo-XQ-PHP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="990"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileSlide" translatesAutoresizingMaskIntoConstraints="NO" id="6zb-Tx-sC7">
+                                <rect key="frame" x="0.0" y="44" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="85B-j7-E9w"/>
+                                    <constraint firstAttribute="height" constant="200" id="ITl-TO-MVj"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whiteLogo" translatesAutoresizingMaskIntoConstraints="NO" id="E9N-SZ-jcW">
+                                <rect key="frame" x="35" y="64" width="250" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="HoC-Hs-iQ8"/>
+                                    <constraint firstAttribute="width" constant="250" id="bU4-TZ-w8c"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oEq-eP-onV">
+                                <rect key="frame" x="0.0" y="244" width="320" height="712"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4EV-Bn-eBW">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="472"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSD-Nh-yJ1">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="452"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZY-yl-Hnu" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                        <rect key="frame" x="10" y="0.0" width="300" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="F8q-rs-x8X"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" keyboardType="namePhonePad" textContentType="name"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="1" green="0.19833517149999999" blue="0.1533301829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        </variation>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4y-Vv-o7W" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                        <rect key="frame" x="10" y="65" width="300" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="T5E-7F-3pF"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" keyboardType="emailAddress" textContentType="email"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="1" green="0.19833517149999999" blue="0.1533301829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        </variation>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M9P-Tx-Qa5" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                        <rect key="frame" x="10" y="130" width="300" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="zb2-qb-ht3"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="1" green="0.19833517149999999" blue="0.1533301829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        </variation>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Subject*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bgP-UJ-lYt" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                                        <rect key="frame" x="10" y="195" width="300" height="60"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="Gn5-rv-FdF"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                                                <color key="value" red="1" green="0.19833517149999999" blue="0.1533301829" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                                                <color key="value" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        </variation>
+                                                    </textField>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="XPe-Pk-0SN" customClass="IQTextView" customModule="IQKeyboardManagerSwift">
+                                                        <rect key="frame" x="10" y="267" width="300" height="110"/>
+                                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="110" id="aol-15-d5t"/>
+                                                        </constraints>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="15"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Type Message"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textView>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfE-d6-ZF1">
+                                                        <rect key="frame" x="60" y="392" width="200" height="40"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="FgZ-LE-nUC"/>
+                                                            <constraint firstAttribute="height" constant="40" id="pYY-Ny-0OC"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                        <state key="normal" title="Send Message">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="XPe-Pk-0SN" firstAttribute="leading" secondItem="dSD-Nh-yJ1" secondAttribute="leading" constant="10" id="2vx-M4-bvJ"/>
+                                                    <constraint firstItem="M9P-Tx-Qa5" firstAttribute="top" secondItem="e4y-Vv-o7W" secondAttribute="bottom" constant="5" id="6Sb-vP-ZcW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bgP-UJ-lYt" secondAttribute="trailing" constant="10" id="AQl-pB-fK4"/>
+                                                    <constraint firstItem="bgP-UJ-lYt" firstAttribute="leading" secondItem="dSD-Nh-yJ1" secondAttribute="leading" constant="10" id="BEM-nE-tkt"/>
+                                                    <constraint firstItem="pfE-d6-ZF1" firstAttribute="top" secondItem="XPe-Pk-0SN" secondAttribute="bottom" constant="15" id="C2G-Y3-tn8"/>
+                                                    <constraint firstItem="e4y-Vv-o7W" firstAttribute="top" secondItem="bZY-yl-Hnu" secondAttribute="bottom" constant="5" id="Cc8-zr-Twb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XPe-Pk-0SN" secondAttribute="trailing" constant="10" id="Cv1-y7-wts"/>
+                                                    <constraint firstItem="bZY-yl-Hnu" firstAttribute="top" secondItem="dSD-Nh-yJ1" secondAttribute="top" id="EsH-r7-ZDV"/>
+                                                    <constraint firstItem="XPe-Pk-0SN" firstAttribute="top" secondItem="bgP-UJ-lYt" secondAttribute="bottom" constant="12" id="Phe-bS-jRW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pfE-d6-ZF1" secondAttribute="bottom" constant="20" id="Wds-Hc-VFq"/>
+                                                    <constraint firstItem="bgP-UJ-lYt" firstAttribute="top" secondItem="M9P-Tx-Qa5" secondAttribute="bottom" constant="5" id="X35-rw-xAr"/>
+                                                    <constraint firstAttribute="trailing" secondItem="bZY-yl-Hnu" secondAttribute="trailing" constant="10" id="Zo1-Qw-oXT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="e4y-Vv-o7W" secondAttribute="trailing" constant="10" id="ax8-oj-Xe4"/>
+                                                    <constraint firstItem="M9P-Tx-Qa5" firstAttribute="leading" secondItem="dSD-Nh-yJ1" secondAttribute="leading" constant="10" id="bc0-Mq-RMN"/>
+                                                    <constraint firstItem="bZY-yl-Hnu" firstAttribute="leading" secondItem="dSD-Nh-yJ1" secondAttribute="leading" constant="10" id="jtF-qK-Mrl"/>
+                                                    <constraint firstItem="pfE-d6-ZF1" firstAttribute="centerX" secondItem="dSD-Nh-yJ1" secondAttribute="centerX" id="kBx-rc-f1N"/>
+                                                    <constraint firstAttribute="trailing" secondItem="M9P-Tx-Qa5" secondAttribute="trailing" constant="10" id="o0a-N9-OaH"/>
+                                                    <constraint firstItem="e4y-Vv-o7W" firstAttribute="leading" secondItem="dSD-Nh-yJ1" secondAttribute="leading" constant="10" id="ppJ-fd-7sx"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="dSD-Nh-yJ1" firstAttribute="leading" secondItem="4EV-Bn-eBW" secondAttribute="leading" id="8yk-4o-z8B"/>
+                                            <constraint firstAttribute="trailing" secondItem="dSD-Nh-yJ1" secondAttribute="trailing" id="RpW-LM-Wy1"/>
+                                            <constraint firstAttribute="bottom" secondItem="dSD-Nh-yJ1" secondAttribute="bottom" constant="20" id="uqn-yL-1kb"/>
+                                            <constraint firstItem="dSD-Nh-yJ1" firstAttribute="top" secondItem="4EV-Bn-eBW" secondAttribute="top" id="zRJ-Kg-nsK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4EV-Bn-eBW" firstAttribute="top" secondItem="oEq-eP-onV" secondAttribute="top" id="40b-lS-2b3"/>
+                                    <constraint firstAttribute="trailing" secondItem="4EV-Bn-eBW" secondAttribute="trailing" id="6et-2f-KCf"/>
+                                    <constraint firstItem="4EV-Bn-eBW" firstAttribute="leading" secondItem="oEq-eP-onV" secondAttribute="leading" id="9zQ-Ye-nzt"/>
+                                    <constraint firstAttribute="bottom" secondItem="4EV-Bn-eBW" secondAttribute="bottom" constant="10" id="wSq-eT-lNg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6zb-Tx-sC7" firstAttribute="leading" secondItem="VSH-MB-iI9" secondAttribute="leading" id="09l-yq-Ap5"/>
+                            <constraint firstItem="VSH-MB-iI9" firstAttribute="bottom" secondItem="oEq-eP-onV" secondAttribute="bottom" id="AGy-9K-Jft"/>
+                            <constraint firstItem="oEq-eP-onV" firstAttribute="leading" secondItem="VSH-MB-iI9" secondAttribute="leading" id="ITE-Yy-lXw"/>
+                            <constraint firstItem="E9N-SZ-jcW" firstAttribute="centerX" secondItem="iAo-XQ-PHP" secondAttribute="centerX" id="L4K-0H-lxa"/>
+                            <constraint firstItem="oEq-eP-onV" firstAttribute="top" secondItem="6zb-Tx-sC7" secondAttribute="bottom" id="ZCm-r4-T7F"/>
+                            <constraint firstItem="6zb-Tx-sC7" firstAttribute="top" secondItem="VSH-MB-iI9" secondAttribute="top" id="ZPy-ve-5Ie"/>
+                            <constraint firstItem="6zb-Tx-sC7" firstAttribute="trailing" secondItem="VSH-MB-iI9" secondAttribute="trailing" id="a7N-8y-hAI"/>
+                            <constraint firstItem="4EV-Bn-eBW" firstAttribute="width" secondItem="iAo-XQ-PHP" secondAttribute="width" id="fAc-Yf-Jjp"/>
+                            <constraint firstItem="VSH-MB-iI9" firstAttribute="trailing" secondItem="oEq-eP-onV" secondAttribute="trailing" id="hQX-tl-6Y5"/>
+                            <constraint firstItem="4EV-Bn-eBW" firstAttribute="height" secondItem="iAo-XQ-PHP" secondAttribute="height" priority="250" id="j7S-bO-azf"/>
+                            <constraint firstItem="E9N-SZ-jcW" firstAttribute="top" secondItem="VSH-MB-iI9" secondAttribute="top" constant="20" id="k4U-Jx-Xt7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VSH-MB-iI9"/>
+                    </view>
+                    <size key="freeformSize" width="320" height="990"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ygr-a4-a6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3880" y="719"/>
+        </scene>
+        <!--How It Works-->
+        <scene sceneID="2k7-1N-tpK">
+            <objects>
+                <viewController storyboardIdentifier="HowItWorksViewController" title="How It Works" hidesBottomBarWhenPushed="YES" id="Lma-ZX-pUo" customClass="HowItWorksViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VhV-J2-1hN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yby-DD-AdZ">
+                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="DZh-Mf-LCh">
+                                        <rect key="frame" x="8" y="10" width="382" height="784"/>
+                                        <color key="backgroundColor" red="0.94711690989999997" green="0.94711690989999997" blue="0.94711690989999997" alpha="0.83920162669999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">How it Works:
+
+OgreSpace is a next generation Artificially Intelligent Marketplace where consumers can search and compare Energy Products for a Super-Fast Ultra-Cool Comparative Shopping experience.Energy Products/Plans can be Bid, Sold &amp; Bought on OgreSpace through a Simple, Fast n’ Easy App on Web &amp; Mobile that can save consumers Hundreds of Dollars on average per year!
+
+1. Signup on OgreSpace
+Signup on OgreSpace is Super Easy and takes less than a few minutes on Web or Mobile: Download our next generation Artificially Intelligent App on Google Play Store or Apple App Store.
+2. Search for Plans/Products
+Enter your Zipcode, Address City or State. OgreSpace will recommend the Top Vendors/Plans with the Best Options to SAVE you Hundreds of Dollars a Year! It hardly takes a few minutes.
+3. Analyze your Energy Consumption
+Setup your profile and let our proprietary AI Crunch/Analyze your Energy Consumption. Based on these Hard-Core Analytics, OgreSpace will alert you on Energy Saving Tips &amp; Vendor/Plan Change Recommendations.
+4. Enjoy the Savings
+After you Signup for the best Energy Product/Pricing, leave a Review for the Energy Vendor. Elevate your comparative shopping experience to a whole new level with OgreSpace. Signup Now.
+How OgreSpace works for Buyers?
+1. Signup on OgreSpace
+Vendor Signup on OgreSpace is a breeze on Web or Mobile: Download our next generation Artificially Intelligent App on Google Play Store or Apple App Store.
+2. Configure your Vendor Profile
+Showcase your Company to the world – Highlight your Strengths and boost your Products’ “Getting Sold” chances!
+3. Add/Edit Products
+Post/Edit your “Products” and showcase your Savings to prospective Buyers. Get Bids on Product Offerings as a Promo Mechanism. Project yourself to the world!
+4. Give your Earning Wings
+OgreSpace gives Wings to your Energy Products sales SELL yourself to Customers on OgreSpace like NEVER BEFORE!
+
+
+</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DZh-Mf-LCh" secondAttribute="bottom" constant="8" id="5Q0-de-cVC"/>
+                                    <constraint firstAttribute="trailing" secondItem="DZh-Mf-LCh" secondAttribute="trailing" constant="8" id="CP8-yP-JtS"/>
+                                    <constraint firstItem="DZh-Mf-LCh" firstAttribute="top" secondItem="Yby-DD-AdZ" secondAttribute="top" constant="10" id="ZVv-l3-YAs"/>
+                                    <constraint firstItem="DZh-Mf-LCh" firstAttribute="leading" secondItem="Yby-DD-AdZ" secondAttribute="leading" constant="8" id="nO9-Yd-nLw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AdF-uK-RZL" firstAttribute="trailing" secondItem="Yby-DD-AdZ" secondAttribute="trailing" constant="8" id="3Bi-qg-5xF"/>
+                            <constraint firstItem="AdF-uK-RZL" firstAttribute="bottom" secondItem="Yby-DD-AdZ" secondAttribute="bottom" constant="8" id="Baq-wC-l4P"/>
+                            <constraint firstItem="Yby-DD-AdZ" firstAttribute="leading" secondItem="AdF-uK-RZL" secondAttribute="leading" constant="8" id="b2B-zH-5JO"/>
+                            <constraint firstItem="Yby-DD-AdZ" firstAttribute="top" secondItem="AdF-uK-RZL" secondAttribute="top" constant="8" id="lma-Pe-zRd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AdF-uK-RZL"/>
+                    </view>
+                    <connections>
+                        <outlet property="howitWorksTxtView" destination="DZh-Mf-LCh" id="4Zn-WW-D1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lTb-Ih-TAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4603" y="688"/>
+        </scene>
+        <!--What Is Ogrespace-->
+        <scene sceneID="r4a-Tq-sId">
+            <objects>
+                <viewController storyboardIdentifier="whatIsOgreViewController" title="What Is Ogrespace" hidesBottomBarWhenPushed="YES" id="t6E-Pe-NYa" customClass="whatIsOgreViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g8C-Jf-j7J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30b-qP-cRc">
+                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="uc8-B2-VJw">
+                                        <rect key="frame" x="8" y="10" width="382" height="784"/>
+                                        <color key="backgroundColor" red="0.94711690989999997" green="0.94711690989999997" blue="0.94711690989999997" alpha="0.83920162669999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <string key="text">What is OgreSpace?
+We, the engineers at OgreSpace have devised bleeding edge Machine Learning (ML) and proprietary Artificially Intelligent (AI) algorithms to bring you a next generation Artificially Intelligent Comparative Shopping Marketplace for Energy Vendors/Products = BTW, we are very proud of our work!
+What is OgreSpace?
+OgreSpace is a next generation Artificially Intelligent Marketplace where consumers can search and compare Energy Products for a Super-Fast Ultra-Cool Comparative Shopping experience. . Energy Products/Plans can be Bid, Sold &amp; Bought on OgreSpace through a Simple, Fast n’ Easy App on Web &amp; Mobile that can save consumers Hundreds of Dollars on average per year!.OgreSpace assists consumers in researching and buying desired energy products/plans at the cheapest price from top and trusted Energy Providers. OgreSpace helps the consumer purchase the desired energy plan with the best reviews at the lowest price possible. From Price Comparison to an Energy Consumption Analysis AI to Reviews Aggregation/Crunching to Buyer/Seller/Product Matching AI &amp; a Custom OgreSpace Score of every Seller and Product based on our proprietary Machine Learning Engine, OgreSpace will assist the consumer through a trusted, neutral, unbiased, time and money saving energy shopping experience.
+
+</string>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uc8-B2-VJw" firstAttribute="top" secondItem="30b-qP-cRc" secondAttribute="top" constant="10" id="AE4-6B-9iY"/>
+                                    <constraint firstItem="uc8-B2-VJw" firstAttribute="leading" secondItem="30b-qP-cRc" secondAttribute="leading" constant="8" id="BI4-6t-Is2"/>
+                                    <constraint firstAttribute="trailing" secondItem="uc8-B2-VJw" secondAttribute="trailing" constant="8" id="FEG-E4-s2Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="uc8-B2-VJw" secondAttribute="bottom" constant="8" id="mjx-Bk-727"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ahb-3R-L6K" firstAttribute="trailing" secondItem="30b-qP-cRc" secondAttribute="trailing" constant="8" id="O31-iN-4ag"/>
+                            <constraint firstItem="30b-qP-cRc" firstAttribute="leading" secondItem="Ahb-3R-L6K" secondAttribute="leading" constant="8" id="YTR-pp-BQq"/>
+                            <constraint firstItem="Ahb-3R-L6K" firstAttribute="bottom" secondItem="30b-qP-cRc" secondAttribute="bottom" constant="8" id="bkc-IQ-ciT"/>
+                            <constraint firstItem="30b-qP-cRc" firstAttribute="top" secondItem="Ahb-3R-L6K" secondAttribute="top" constant="8" id="qKX-Py-ViG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ahb-3R-L6K"/>
+                    </view>
+                    <connections>
+                        <outlet property="whatisOgreTxtView" destination="uc8-B2-VJw" id="AVp-R4-zc3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cjc-3h-oGE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5248" y="688"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dprofile" width="30.333333969116211" height="30"/>
+        <image name="profileSlide" width="512" height="381"/>
+        <image name="unLike" width="30" height="30"/>
+        <image name="whiteLogo" width="170.66667175292969" height="38.666667938232422"/>
+    </resources>
+</document>

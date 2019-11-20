@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2F6-Tb-bJv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites View Controller-->
+        <scene sceneID="ZYA-zP-Tkg">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="THi-mG-e1Y" customClass="FavoritesViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GB0-4d-u6O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bfM-lh-bnl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="THi-mG-e1Y" id="Bxg-0J-RXM"/>
+                                    <outlet property="delegate" destination="THi-mG-e1Y" id="f6Z-Qg-IFv"/>
+                                </connections>
+                            </tableView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="browser" translatesAutoresizingMaskIntoConstraints="NO" id="FTQ-Ye-ULs">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2Yl-pF-44p"/>
+                                    <constraint firstAttribute="width" constant="100" id="QKe-gD-xIR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bfM-lh-bnl" firstAttribute="leading" secondItem="45s-nv-KgZ" secondAttribute="leading" id="CYH-tc-0Mk"/>
+                            <constraint firstItem="FTQ-Ye-ULs" firstAttribute="centerY" secondItem="GB0-4d-u6O" secondAttribute="centerY" id="N3J-Pm-d5n"/>
+                            <constraint firstItem="bfM-lh-bnl" firstAttribute="bottom" secondItem="45s-nv-KgZ" secondAttribute="bottom" id="koS-jV-5xA"/>
+                            <constraint firstItem="bfM-lh-bnl" firstAttribute="top" secondItem="45s-nv-KgZ" secondAttribute="top" id="s66-eI-xel"/>
+                            <constraint firstItem="FTQ-Ye-ULs" firstAttribute="centerX" secondItem="GB0-4d-u6O" secondAttribute="centerX" id="s7B-mL-gom"/>
+                            <constraint firstItem="bfM-lh-bnl" firstAttribute="trailing" secondItem="45s-nv-KgZ" secondAttribute="trailing" id="ud2-mc-QJ2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="45s-nv-KgZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ikw-ch-E2W"/>
+                    <connections>
+                        <outlet property="favoritesTblView" destination="bfM-lh-bnl" id="D9p-GJ-v1G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alE-mm-Mqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="103.89805097451276"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="n2J-ZN-l8F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2F6-Tb-bJv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="Favourites" id="0sc-Ep-c8c"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D8O-vk-TmL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="THi-mG-e1Y" kind="relationship" relationship="rootViewController" id="xeH-nQ-odm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="67S-GU-1t0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.80000000000001" y="103.89805097451276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Favourites" width="30" height="30"/>
+        <image name="browser" width="128" height="128"/>
+    </resources>
+</document>

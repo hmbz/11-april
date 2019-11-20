@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="FeW-kd-cnC" userLabel="Search Bar View" customClass="SearchBarView" customModule="OgreSpace" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcC-KC-RPD">
+                    <rect key="frame" x="3" y="0.0" width="354" height="40"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DrI-Y7-YZa">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="40"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uhl-a6-UAW">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLI-Gt-lUk">
+                                            <rect key="frame" x="0.0" y="5" width="30" height="30"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <inset key="imageEdgeInsets" minX="2" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <state key="normal" title="Button" image="homeIcon"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="MLI-Gt-lUk" secondAttribute="trailing" id="78q-xr-gBv"/>
+                                        <constraint firstAttribute="width" constant="30" id="Ba0-Wi-v32"/>
+                                        <constraint firstAttribute="bottom" secondItem="MLI-Gt-lUk" secondAttribute="bottom" constant="5" id="DFF-Rx-7Wc"/>
+                                        <constraint firstItem="MLI-Gt-lUk" firstAttribute="leading" secondItem="Uhl-a6-UAW" secondAttribute="leading" id="J75-B5-0gE"/>
+                                        <constraint firstItem="MLI-Gt-lUk" firstAttribute="top" secondItem="Uhl-a6-UAW" secondAttribute="top" constant="5" id="Ltb-Xs-1Wa"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOp-QM-KFL">
+                                    <rect key="frame" x="30" y="0.0" width="274" height="40"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zyR-yT-mSP">
+                                            <rect key="frame" x="0.0" y="0.0" width="274" height="40"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </searchBar>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjq-RN-svF">
+                                            <rect key="frame" x="244" y="2" width="30" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="WrO-cc-8e4"/>
+                                            </constraints>
+                                            <state key="normal" image="Mic"/>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="Xjq-RN-svF" secondAttribute="bottom" id="125-Mo-dBJ"/>
+                                        <constraint firstItem="Xjq-RN-svF" firstAttribute="top" secondItem="IOp-QM-KFL" secondAttribute="top" constant="2" id="5bf-UX-Rja"/>
+                                        <constraint firstItem="zyR-yT-mSP" firstAttribute="leading" secondItem="IOp-QM-KFL" secondAttribute="leading" id="7Fb-dy-He1"/>
+                                        <constraint firstAttribute="trailing" secondItem="zyR-yT-mSP" secondAttribute="trailing" id="A1A-Ng-MQB"/>
+                                        <constraint firstItem="zyR-yT-mSP" firstAttribute="top" secondItem="IOp-QM-KFL" secondAttribute="top" id="BCP-5g-XLr"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xjq-RN-svF" secondAttribute="trailing" id="hyp-Il-B3f"/>
+                                        <constraint firstAttribute="bottom" secondItem="zyR-yT-mSP" secondAttribute="bottom" id="th9-YC-MHa"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VR3-RU-siu">
+                                    <rect key="frame" x="304" y="0.0" width="50" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="50" id="vd7-AW-m1h"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                    <state key="normal" title="Invite">
+                                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="6"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="DrI-Y7-YZa" firstAttribute="top" secondItem="YcC-KC-RPD" secondAttribute="top" id="Hlf-cK-LZs"/>
+                        <constraint firstAttribute="bottom" secondItem="DrI-Y7-YZa" secondAttribute="bottom" id="Io4-1Y-7Zb"/>
+                        <constraint firstAttribute="trailing" secondItem="DrI-Y7-YZa" secondAttribute="trailing" id="l7X-9h-4m0"/>
+                        <constraint firstItem="DrI-Y7-YZa" firstAttribute="leading" secondItem="YcC-KC-RPD" secondAttribute="leading" id="mAd-IV-QeU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="YcC-KC-RPD" firstAttribute="top" secondItem="T77-vi-IIv" secondAttribute="top" id="38q-FH-DHR"/>
+                <constraint firstItem="YcC-KC-RPD" firstAttribute="leading" secondItem="T77-vi-IIv" secondAttribute="leading" constant="3" id="JVo-b3-Bh4"/>
+                <constraint firstItem="YcC-KC-RPD" firstAttribute="bottom" secondItem="T77-vi-IIv" secondAttribute="bottom" id="Tmn-qV-Ydh"/>
+                <constraint firstItem="YcC-KC-RPD" firstAttribute="trailing" secondItem="T77-vi-IIv" secondAttribute="trailing" constant="-3" id="pqC-tP-H4W"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="T77-vi-IIv"/>
+            <connections>
+                <outlet property="homeBtn" destination="MLI-Gt-lUk" id="Cfh-go-PkU"/>
+                <outlet property="inviteBtn" destination="VR3-RU-siu" id="cl7-E0-YH1"/>
+                <outlet property="micBtn" destination="Xjq-RN-svF" id="56m-PM-6UJ"/>
+                <outlet property="searchBtn" destination="zyR-yT-mSP" id="4YB-kC-eIc"/>
+            </connections>
+            <point key="canvasLocation" x="320.28985507246381" y="-351.35869565217394"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Mic" width="30.333333969116211" height="30.333333969116211"/>
+        <image name="homeIcon" width="29" height="29"/>
+    </resources>
+</document>

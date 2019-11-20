@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xuf-Ct-7av">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pLd-3c-5rM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xuf-Ct-7av" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vIm-d0-HDE">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iIg-Ss-tCu" kind="relationship" relationship="rootViewController" id="1sA-hB-2ry"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hiR-yK-lBp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110.14492753623189" y="14.673913043478262"/>
+        </scene>
+        <!--My Properties View Controller-->
+        <scene sceneID="JKn-zi-SAC">
+            <objects>
+                <viewController storyboardIdentifier="MyPropertiesViewController" id="iIg-Ss-tCu" customClass="MyPropertiesViewController" customModule="OgreSpace" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ui2-n9-5Xj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uxy-hy-qEb">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iIg-Ss-tCu" id="mMW-qU-A4X"/>
+                                    <outlet property="delegate" destination="iIg-Ss-tCu" id="v9D-hA-XcO"/>
+                                </connections>
+                            </tableView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="browser" translatesAutoresizingMaskIntoConstraints="NO" id="S99-zL-Nit">
+                                <rect key="frame" x="157" y="318" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Xko-09-Izq"/>
+                                    <constraint firstAttribute="width" constant="100" id="ggS-tI-shy"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Uxy-hy-qEb" firstAttribute="trailing" secondItem="Ofa-QI-Jbr" secondAttribute="trailing" id="4P7-Ql-ktl"/>
+                            <constraint firstItem="S99-zL-Nit" firstAttribute="centerY" secondItem="Ui2-n9-5Xj" secondAttribute="centerY" id="M78-AX-Npa"/>
+                            <constraint firstItem="S99-zL-Nit" firstAttribute="centerX" secondItem="Ui2-n9-5Xj" secondAttribute="centerX" id="NH7-qg-PXu"/>
+                            <constraint firstItem="Uxy-hy-qEb" firstAttribute="leading" secondItem="Ofa-QI-Jbr" secondAttribute="leading" id="Xnx-Mo-C94"/>
+                            <constraint firstItem="Uxy-hy-qEb" firstAttribute="bottom" secondItem="Ofa-QI-Jbr" secondAttribute="bottom" id="a8f-Pp-JSj"/>
+                            <constraint firstItem="Uxy-hy-qEb" firstAttribute="top" secondItem="Ofa-QI-Jbr" secondAttribute="top" id="eEm-KC-prB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ofa-QI-Jbr"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Mg-CD-bWk"/>
+                    <connections>
+                        <outlet property="myPropertiesTblView" destination="Uxy-hy-qEb" id="Y0U-gA-LFU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qgz-lQ-ekq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="browser" width="128" height="128"/>
+    </resources>
+</document>
